@@ -1,5 +1,6 @@
 "use strict";
 //create new request obj
+const outputDOM = require('./outputData');
 let msgRequest = new XMLHttpRequest();
 
 function ifXHRFails() {
@@ -9,7 +10,9 @@ function ifXHRFails() {
 function afterLoaded() {
     let msgData = JSON.parse(event.target.responseText);
     console.log('data', msgData.messages);
-    return msgData.messages;
+    msgData.messages.forEach(msg => {
+        outputDOM.output.innerHTML += `<p>${msg}</p>`;
+    });
 }
 
 //listeners for completed request
