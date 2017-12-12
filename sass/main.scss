@@ -1,0 +1,12 @@
+.nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+
+#user-input {
+    width: 50%;
+}
+#user-input input{
+    width: 100%;
+}
