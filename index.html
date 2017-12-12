@@ -13,15 +13,24 @@
     <div class="nav">
         <ul>
             <li>logo</li>
-            <li id="user-input"><input type="text"></li>
+            <li id="user-input"><input type="text" placeholder="Enter Message"></li>
             <li><button>Clear Board</button></li>
         </ul>
+        
+        <input type="checkbox" id="darkTheme" name="dark" value="dark">
+        <label for="darkTheme">Dark Water</label>
+
+        <input type="checkbox" id="largeText" name="large text" value="">
+        <label for="largeText">Large Text</label>
     </div>
 
+    <div id="msg-container">
+        <p>Messages:</p>
+        <section id="msg-board">
+            <!-- msg output -->
+        </section>
+    </div>
 
-    <section id="msg-board">
-        <!-- msg output -->
-    </section>
 
     <script src="dist/bundle.js"></script>
 </body>
