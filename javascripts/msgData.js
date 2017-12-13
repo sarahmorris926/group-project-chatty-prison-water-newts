@@ -1,6 +1,6 @@
 "use strict";
-const outputDOM = require('./outputData');
-
+// const outputDOM = require('./outputData');
+const output = document.querySelector("#msg-board");
 //create new request obj
 let msgRequest = new XMLHttpRequest();
 
@@ -12,7 +12,7 @@ function afterLoaded() {
     let msgData = JSON.parse(event.target.responseText);
     // console.log('data', msgData.messages);
     msgData.messages.forEach( (msg, i)=> {
-        outputDOM.output.innerHTML += `<div class='msg' id='msg${i}'>
+        output.innerHTML += `<div class='msg' id='msg${i}'>
         <p>${msg}</p>
         <button class='delete'>Delete</button>
         </div>`;
@@ -29,4 +29,4 @@ msgRequest.open('GET', "messages.json");
 //go get it
 msgRequest.send();
 
-module.exports = { afterLoaded };
+// module.exports = { afterLoaded };
