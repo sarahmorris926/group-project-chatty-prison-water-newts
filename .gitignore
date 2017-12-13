@@ -3,3 +3,5 @@ dist
 .sass-cache
 .DS-Store
 stylesheets
+javascripts/clearBoard.js
+javascripts/deleteMsg.js

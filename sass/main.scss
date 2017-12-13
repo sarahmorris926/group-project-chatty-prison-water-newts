@@ -1,19 +1,30 @@
+// Navigation
 .nav ul {
     display: flex;
     list-style: none;
     justify-content: space-between;
 }
-
-#user-input {
+#input-container {
     width: 50%;
 }
-#user-input input{
+#input-container input{
     width: 100%;
 }
 
+
+// Message Board
 #msg-board {
     border: 1px solid;
     height: 20em;
     width: 75%;
     margin: auto;
+}
+
+
+// Individual Messages
+.msg{
+    margin: .75em 1em;
+}
+.msg p {
+    display: inline;
 }
