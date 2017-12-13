@@ -26,7 +26,6 @@ const output = document.querySelector("#msg-board");
 let clearBTN = document.getElementById("clearBtn");
 
 
-
 //accepts an element id, user message, then add the user's message - and delete button - to the specified parent element. 
 const addMsg = (element, message) => {
     element.innerHTML += `<div class='msg newMsg'>
@@ -35,6 +34,7 @@ const addMsg = (element, message) => {
     </div>`;
     //message stored in a private array
     userMsgs.addItem(message);
+    output.scrollTop = output.scrollHeight;
     console.log(userMsgs.getItems());
 };
 
