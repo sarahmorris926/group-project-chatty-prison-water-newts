@@ -1,14 +1,30 @@
 // Navigation
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /* overflow: hidden; */
+    padding: 0em;
+    background-color: white;
+}
 .nav ul {
     display: flex;
     list-style: none;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 #input-container {
     width: 50%;
 }
 #input-container input{
     width: 100%;
+}
+#checkBoxes {
+    text-align: center;
+}
+
+// Main Content under Nav
+.main-content{
+    margin-top: 5em;
 }
 
 

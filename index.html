@@ -18,20 +18,25 @@
             <li><button id="clearBtn">Clear Board</button></li>
         </ul>
         
-        <input type="checkbox" id="darkTheme" name="dark" value="dark">
-        <label for="darkTheme">Dark Water</label>
+        <div id="checkBoxes">
+            <input type="checkbox" id="darkTheme" name="dark" value="dark">
+            <label for="darkTheme">Dark Water</label>
 
-        <input type="checkbox" id="largeText" name="large text" value="">
-        <label for="largeText">Large Text</label>
+            <input type="checkbox" id="largeText" name="large text" value="">
+            <label for="largeText">Large Text</label>
+        </div>
     </div>
 
-    <div id="msg-container">
-        <p>Messages:</p>
-        <section id="msg-board">
-            <!-- msg output -->
-        </section>
-    </div>
+    <main class="main-content">
 
+        <div id="msg-container">
+            <p>Messages:</p>
+            <section id="msg-board">
+                <!-- msg output -->
+            </section>
+        </div>
+
+    </main>
 
     <script src="dist/bundle.js"></script>
 </body>
