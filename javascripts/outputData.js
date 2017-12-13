@@ -1,6 +1,6 @@
 "use strict";
 // let userMsgs = [];
-var Msgs = function() {
+const Msgs = function() {
   var array = [];
   this.getItems = function() {
     return array;
@@ -10,6 +10,10 @@ var Msgs = function() {
  };
  this.removeItem = function(item){
      array.splice(array.indexOf(item), 1);
+     console.log(array);
+ };
+ this.clearItems = function(){
+     array = [];
      console.log(array);
  };    
 };
