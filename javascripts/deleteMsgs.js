@@ -5,8 +5,9 @@ let clearBTN = document.getElementById("clearBtn");
 
 output.addEventListener("click", function (event) {
     if (event.target.className === "delete") {
-        // outputData.userMsgs.splice(outputData.userMsgs.indexOf(event.target.parentNode.textContent), 1);
+        outputData.userMsgs.removeItem(event.target.parentNode.firstElementChild.textContent);
         output.removeChild(event.target.parentNode);
+        console.log('toRemove: ', event.target.parentNode.firstElementChild.textContent);
     }
 });
 
