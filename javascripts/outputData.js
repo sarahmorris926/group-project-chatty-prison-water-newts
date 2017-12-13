@@ -7,6 +7,10 @@ var Msgs = function() {
   };
  this.addItem = function(item) {
     array.push(item);
+ };
+ this.removeItem = function(item){
+     array.splice(array.indexOf(item), 1);
+     console.log(array);
  };    
 };
 
