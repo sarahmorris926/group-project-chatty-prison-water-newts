@@ -1,18 +1,19 @@
 "use strict";
 
-const DOM = require("./outputData.js");
+const DOM = require("./outputData");
 
-let clearBTN = document.getElementById("clear");
+let clearBTN = document.getElementById("clearBtn");
 
 DOM.output.addEventListener("click", function(event) {
     if (event.target.className === "delete") {
         console.log("did I click delete?", event.target);
-        DOM.userMsgs.splice(DOM.userMsgs.indexOf(event.currentTarget.parent.textContent), 1);
-        DOM.output.removeChild(event.currentTarget.parent);
+        DOM.userMsgs.splice(DOM.userMsgs.indexOf(event.currentTarget.parentNode.textContent), 1);
+        DOM.output.removeChild(event.target.parentNode);
+        console.log("what is this?", event.target.parentNode.textContent);
     }
 });
 
-clearBTN.addEventListener("click", clearBoard());
+clearBTN.addEventListener("click", clearBoard);
 
 function clearBoard() {
     DOM.output.innerHTML = "";

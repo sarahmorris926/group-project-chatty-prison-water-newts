@@ -1,5 +1,6 @@
 "use strict";
 // const clearBtn = require('./clearBoard.js');
+// const clearBtn = require('./deleteMsgs');
 let userMsgs = [];
 const userInput = document.getElementById('user-input');
 const output = document.querySelector("#msg-board");
