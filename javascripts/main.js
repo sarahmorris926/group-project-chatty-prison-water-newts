@@ -1,5 +1,5 @@
 "use strict";
 const initialMsgs = require('./msgData');
-// const deleteMsg = require('./deleteMsg');
+const deleteMsg = require('./deleteMsgs');
 const domInput = require('./outputData');
 // const clearBoard = require('./clearBoard');
