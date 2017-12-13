@@ -1,5 +1,5 @@
 "use strict";
-const outputDOM = require('./outputData.js');
+const outputDOM = require('./outputData');
 
 //create new request obj
 let msgRequest = new XMLHttpRequest();
