@@ -5,7 +5,7 @@ let clearBTN = document.getElementById("clearBtn");
 
 output.addEventListener("click", function (event) {
     if (event.target.className === "delete") {
-        outputData.userMsgs.splice(outputData.userMsgs.indexOf(event.target.parentNode.textContent), 1);
+        // outputData.userMsgs.splice(outputData.userMsgs.indexOf(event.target.parentNode.textContent), 1);
         output.removeChild(event.target.parentNode);
     }
 });
@@ -14,7 +14,7 @@ clearBTN.addEventListener("click", clearBoard);
 
 function clearBoard() {
     output.innerHTML = "";
-    clearBTN.disabled = "true";
+    clearBTN.disabled = true;
 }
 
 module.exports = { clearBTN };
