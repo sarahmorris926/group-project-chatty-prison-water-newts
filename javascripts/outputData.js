@@ -34,8 +34,7 @@ const addMsg = (element, message) => {
     </div>`;
     //message stored in a private array
     userMsgs.addItem(message);
-    output.scrollTop = output.scrollHeight;
-    console.log(userMsgs.getItems());
+    element.scrollTop = output.scrollHeight;
 };
 
 
