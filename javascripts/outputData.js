@@ -15,7 +15,7 @@ let userMsgs = new Msgs();
 
 const userInput = document.getElementById('user-input');
 const output = document.querySelector("#msg-board");
-// const clearBtn = require('./deleteMsgs');
+let clearBTN = document.getElementById("clearBtn");
 
 
 
@@ -39,7 +39,7 @@ userInput.addEventListener('keypress', function(){
     if(event.keyCode === 13 && !isEmpty(userInput.value)){
         addMsg(output, userInput.value);
         userInput.value = "";
-        // clearBtn.enableBtn();
+        clearBTN.disabled = false;
     }
 });
 
