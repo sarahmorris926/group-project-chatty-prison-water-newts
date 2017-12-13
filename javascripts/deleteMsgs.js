@@ -1,23 +1,27 @@
 "use strict";
-
-const DOM = require("./outputData");
-
+const outputData = require("./outputData");
+const output = document.querySelector("#msg-board");
 let clearBTN = document.getElementById("clearBtn");
 
-DOM.output.addEventListener("click", function(event) {
+output.addEventListener("click", function (event) {
     if (event.target.className === "delete") {
-        console.log("did I click delete?", event.target);
-        DOM.userMsgs.splice(DOM.userMsgs.indexOf(event.currentTarget.parentNode.textContent), 1);
-        DOM.output.removeChild(event.target.parentNode);
-        console.log("what is this?", event.target.parentNode.textContent);
+        outputData.userMsgs.splice(outputData.userMsgs.indexOf(event.target.parentNode.textContent), 1);
+        output.removeChild(event.target.parentNode);
     }
 });
 
 clearBTN.addEventListener("click", clearBoard);
 
 function clearBoard() {
-    DOM.output.innerHTML = "";
+    output.innerHTML = "";
     clearBTN.disabled = "true";
 }
 
-module.exports = { clearBTN }; 
+module.exports = { clearBTN };
+
+
+// should accept a message element id and then remove the correct element from the DOM. This IIFE should also remove the corresponding message from the private array that was created in the previous module
+
+
+// msgBoard.addEventListener('click', DOM.deleteMsg);
+
