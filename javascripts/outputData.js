@@ -34,7 +34,7 @@ const addMsg = (element, message) => {
     </div>`;
     //message stored in a private array
     userMsgs.addItem(message);
-    element.scrollTop = output.scrollHeight;
+    element.scrollTop = element.scrollHeight;
 };
 
 const replaceMsg = (element, newMsg)=>{
@@ -45,7 +45,7 @@ const replaceMsg = (element, newMsg)=>{
     <span class="time">${Date()}</span>`;
     //message stored in a private array
     userMsgs.addItem(newMsg);
-    element.scrollTop = output.scrollHeight;
+    element.scrollTop = element.scrollHeight;
 };
 
 
