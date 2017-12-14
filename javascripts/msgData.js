@@ -1,5 +1,5 @@
 "use strict";
-// const outputDOM = require('./outputData');
+const outputData = require('./outputData');
 const output = document.querySelector("#msg-board");
 //create new request obj
 let msgRequest = new XMLHttpRequest();
@@ -16,6 +16,7 @@ function afterLoaded() {
         <p>${msg}</p>
         <button class='delete'>Delete</button>
         </div>`;
+        outputData.userMsgs.addItem(msg);
     });
 }
 
