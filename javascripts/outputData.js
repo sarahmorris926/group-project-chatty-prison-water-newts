@@ -54,10 +54,12 @@ userInput.addEventListener('keypress', function(){
         addMsg(output, userInput.value);
         userInput.value = "";
         clearBTN.disabled = false;
-        if (userMsgs.userMsgs.getLength() <= 20){
-            
+        if (userMsgs.getLength() >= 20){
+            output.removeChild(output.firstChild); 
+            console.log(output.firstChild);
         }
     }
+    console.log(userMsgs.getLength());
 });
 
 module.exports = { userMsgs, addMsg, isEmpty, replaceMsg };
