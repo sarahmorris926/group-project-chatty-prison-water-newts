@@ -2,24 +2,17 @@
 // let userMsgs = [];
 const Msgs = function() {
   var array = [];
-  this.getItems = function() {
-    return array;
-  };
- this.addItem = function(item) {
-    array.push(item);
-    console.log(array);
- };
- this.removeItem = function(item){
-     array.splice(array.indexOf(item), 1);
-     console.log(array);
- };
- this.editItem = function(item, newItem){
-     array.splice(array.indexOf(item), 1, newItem);
- };
- this.clearItems = function(){
-     array = [];
-     console.log(array);
- };    
+  this.getItems = () => array;
+  //
+  this.getLength = () => array.length;
+  //
+  this.addItem = (item) => array.push(item);
+  //
+  this.removeItem = (item) => array.splice(array.indexOf(item), 1);
+  //
+ this.editItem = (item, newItem) => array.splice(array.indexOf(item), 1, newItem);
+ //
+ this.clearItems = () => array = [];    
 };
 
 let userMsgs = new Msgs();
@@ -61,6 +54,9 @@ userInput.addEventListener('keypress', function(){
         addMsg(output, userInput.value);
         userInput.value = "";
         clearBTN.disabled = false;
+        if (userMsgs.userMsgs.getLength() <= 20){
+            
+        }
     }
 });
 
