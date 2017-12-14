@@ -8,29 +8,31 @@
     <link href="stylesheets/main.css" rel="stylesheet">
 </head>
 
-<body>
+<body id="container">
 
-    <div class="nav">
-        <ul>
-            <li>logo</li>
-            <li id="input-container"><input id="user-input" 
-                type="text" placeholder="Enter Message"></li>
-            <li><button id="clearBtn">Clear Board</button></li>
-        </ul>
-        
-        <input type="checkbox" id="darkTheme" name="dark" value="dark">
-        <label for="darkTheme">Dark Water</label>
+        <div class="nav">
+            <ul>
+                <li>logo</li>
+                <li id="input-container"><input id="user-input" 
+                    type="text" placeholder="Enter Message"></li>
+                <li><button id="clearBtn">Clear Board</button></li>
+            </ul>
+            
+            <input type="checkbox" id="darkTheme" name="dark" value="dark">
+            <label for="darkTheme">Dark Water</label>
 
-        <input type="checkbox" id="largeText" name="large text" value="">
-        <label for="largeText">Large Text</label>
-    </div>
+            <input type="checkbox" id="largeText" name="large text" value="">
+            <label for="largeText">Large Text</label>
+        </div>
 
-    <div id="msg-container">
-        <p>Messages:</p>
-        <section id="msg-board">
-            <!-- msg output -->
-        </section>
-    </div>
+        <div id="msg-container" class="msg-container">
+            <p>Messages:</p>
+            <section id="msg-board" class="msg-board">
+                <!-- msg output -->
+            </section>
+        </div>
+
+
 
 
     <script src="dist/bundle.js"></script>
