@@ -29,6 +29,8 @@ const addMsg = (element, message) => {
     <p>${message}</p>
     <span class='delete'>🗑️</span>
     <span class='edit'>Edit</span>
+    <br>
+    <span class="time">${Date()}</span>
     </div>`;
     //message stored in a private array
     userMsgs.addItem(message);
