@@ -11,6 +11,8 @@
     display: flex;
     list-style: none;
     justify-content: space-around;
+    align-items: center;
+    padding-left: 0;
 }
 #input-container {
     width: 50%;
@@ -24,7 +26,7 @@
 
 // Main Content under Nav
 .main-content{
-    margin-top: 5em;
+    margin-top: 8em;
 }
 
 
@@ -51,4 +53,9 @@
 .newMsg{
     text-align: right;
     opacity: 1;
+}
+
+.gecko {
+    height: 4.25em;
+    width: 3.25em;
 }
