@@ -7,11 +7,14 @@ const Msgs = function() {
   };
  this.addItem = function(item) {
     array.push(item);
-    // console.log(array);
+    console.log(array);
  };
  this.removeItem = function(item){
      array.splice(array.indexOf(item), 1);
      console.log(array);
+ };
+ this.editItem = function(item, newItem){
+     array.splice(array.indexOf(item), 1, newItem);
  };
  this.clearItems = function(){
      array = [];
@@ -32,9 +35,19 @@ const addMsg = (element, message) => {
     element.innerHTML += `<div class='msg newMsg'>
     <p>${message}</p>
     <button class='delete'>Delete</button>
+    <button class='edit'>Edit</button>
     </div>`;
     //message stored in a private array
     userMsgs.addItem(message);
+    element.scrollTop = output.scrollHeight;
+};
+
+const replaceMsg = (element, newMsg)=>{
+    element.innerHTML = `<p>${newMsg}</p>
+    <button class='delete'>Delete</button>
+    <button class='edit'>Edit</button>`;
+    //message stored in a private array
+    userMsgs.addItem(newMsg);
     element.scrollTop = output.scrollHeight;
 };
 
@@ -51,6 +64,6 @@ userInput.addEventListener('keypress', function(){
     }
 });
 
-module.exports = { userMsgs };
+module.exports = { userMsgs, addMsg, isEmpty, replaceMsg };
 
 
