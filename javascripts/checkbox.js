@@ -2,7 +2,7 @@
 let lgTxt = document.getElementById('largeText');
 const msgBoard = document.querySelector("#msg-board");
 const darkTheme = document.getElementById('darkTheme');
-let container = document.querySelector('#container');
+let container = document.getElementById('container');
 
 lgTxt.addEventListener('change', function(){
     if(this.checked){
