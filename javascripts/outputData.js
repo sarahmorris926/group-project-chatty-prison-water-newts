@@ -7,6 +7,7 @@ const Msgs = function() {
   };
  this.addItem = function(item) {
     array.push(item);
+    // console.log(array);
  };
  this.removeItem = function(item){
      array.splice(array.indexOf(item), 1);

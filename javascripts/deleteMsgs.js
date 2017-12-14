@@ -5,9 +5,9 @@ let clearBTN = document.getElementById("clearBtn");
 
 output.addEventListener("click", function (event) {
     if (event.target.className === "delete") {
-        if (event.target.parentNode.className === "msg newMsg"){
-            outputData.userMsgs.removeItem(event.target.parentNode.firstElementChild.textContent);
-        }
+        //on 'delete' press, match msg text with array userMsgs and remove
+        outputData.userMsgs.removeItem(event.target.parentNode.firstElementChild.textContent);
+        //remove the parent div of that delete button
         output.removeChild(event.target.parentNode);
     }
 });
