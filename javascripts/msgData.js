@@ -14,7 +14,7 @@ function afterLoaded() {
     msgData.messages.forEach( (msg, i)=> {
         output.innerHTML += `<div class='msg' id='msg${i}'>
         <p>${msg}</p>
-        <button class='delete'>Delete</button>
+        <span class='delete'>🗑️</span>
         </div>`;
         outputData.userMsgs.addItem(msg);
     });
