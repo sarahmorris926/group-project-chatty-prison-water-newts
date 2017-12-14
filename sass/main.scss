@@ -1,4 +1,9 @@
 // Navigation
+body {
+    font-family: 'Bevan', cursive;
+    letter-spacing: .07em;
+}
+
 .nav {
     position: fixed;
     top: 0;
@@ -20,8 +25,22 @@
 #input-container input{
     width: 100%;
 }
+
+#user-input {
+    font-family: 'Amatic SC', cursive;
+    font-size: 1em;
+    letter-spacing: .1em;
+}
+
 #checkBoxes {
     text-align: center;
+}
+
+#clearBtn {
+    font-family: 'Bevan', cursive;
+    letter-spacing: .2em;
+    border-radius: 1em;
+    background: linear-gradient(to top left, rgb(211, 209, 209), rgba(211, 209, 209, .5))
 }
 
 // Main Content under Nav
@@ -29,11 +48,20 @@
     margin-top: 8em;
 }
 
+h3 {
+    width: 70%;
+    margin: 1em auto;
+}
+
 
 // Message Board
 #msg-board {
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.2em;
+    letter-spacing: .07em;
     border: 1px solid;
-    height: 25em;
+    border-radius: 1em 0 0 1em;
+    height: 20em;
     max-width: 46em;
     min-width: 23em;
     width: 60%;
@@ -60,14 +88,51 @@
  .darkTheme {
      background-color: #191d22;
      color: white;
-     text-shadow: .5px .5px .5px white;
+     text-shadow: 0 0 2px rgb(20, 19, 19), .5px .5px 8px white;
      
  }
 
 .gecko {
     height: 4.25em;
     width: 3.25em;
+    filter: drop-shadow(.5px .5px 8px white);
 }
+
+
+//msg "buttons"
+.edit {
+    margin-left: .5em;
+    font-size: .7em;
+    color: slategray;
+    cursor: pointer;
+}
+
+.submit {
+    font-size: .8em;
+    color: slateblue;
+    cursor: pointer;
+}
+
+.delete {
+    font-size: .7em;
+    cursor: pointer;
+    margin-left: .5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // Media Queries
@@ -76,4 +141,3 @@
         width: 70%;
     }
 }
-
