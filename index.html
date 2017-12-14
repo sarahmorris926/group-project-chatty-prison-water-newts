@@ -8,16 +8,19 @@
     <link href="stylesheets/main.css" rel="stylesheet">
 </head>
 
+
 <body id="container">
 
-        <div class="nav">
-            <ul>
-                <li>logo</li>
-                <li id="input-container"><input id="user-input" 
-                    type="text" placeholder="Enter Message"></li>
-                <li><button id="clearBtn">Clear Board</button></li>
-            </ul>
-            
+    <div class="nav">
+        <ul>
+            <li>logo</li>
+            <li id="input-container"><input id="user-input" 
+                type="text" placeholder="Enter Message"></li>
+            <li><button id="clearBtn">Clear Board</button></li>
+        </ul>
+        
+        <div id="checkBoxes">
+
             <input type="checkbox" id="darkTheme" name="dark" value="dark">
             <label for="darkTheme">Dark Water</label>
 
@@ -25,15 +28,19 @@
             <label for="largeText">Large Text</label>
         </div>
 
-        <div id="msg-container" class="msg-container">
+    </div>
+
+    <main class="main-content">
+
+        <div id="msg-container">
             <p>Messages:</p>
-            <section id="msg-board" class="msg-board">
+            <section id="msg-board">
                 <!-- msg output -->
             </section>
         </div>
 
 
-
+    </main>
 
     <script src="dist/bundle.js"></script>
 </body>

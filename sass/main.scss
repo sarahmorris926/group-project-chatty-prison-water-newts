@@ -1,8 +1,16 @@
 // Navigation
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /* overflow: hidden; */
+    padding: 0em;
+    background-color: white;
+}
 .nav ul {
     display: flex;
     list-style: none;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 #input-container {
     width: 50%;
@@ -10,13 +18,23 @@
 #input-container input{
     width: 100%;
 }
+#checkBoxes {
+    text-align: center;
+}
+
+// Main Content under Nav
+.main-content{
+    margin-top: 5em;
+}
 
 
 // Message Board
 #msg-board {
     border: 1px solid;
     height: 20em;
-    width: 75%;
+    max-width: 46em;
+    min-width: 23em;
+    width: 70%;
     margin: auto;
     overflow-y: scroll;
 }
@@ -25,6 +43,7 @@
 // Individual Messages
 .msg{
     margin: .75em 1em;
+    opacity: .65;
 }
 .msg p {
     display: inline;
