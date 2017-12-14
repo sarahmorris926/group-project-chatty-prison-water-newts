@@ -40,7 +40,9 @@ const addMsg = (element, message) => {
 const replaceMsg = (element, newMsg)=>{
     element.innerHTML = `<p>${newMsg}</p>
     <span class='delete'>🗑️</span>
-    <span class='edit'>Edit</span>`;
+    <span class='edit'>Edit</span>    
+    <br>
+    <span class="time">${Date()}</span>`;
     //message stored in a private array
     userMsgs.addItem(newMsg);
     element.scrollTop = output.scrollHeight;
@@ -58,10 +60,8 @@ userInput.addEventListener('keypress', function(){
         clearBTN.disabled = false;
         if (userMsgs.getLength() >= 20){
             output.removeChild(output.firstChild); 
-            console.log(output.firstChild);
         }
     }
-    console.log(userMsgs.getLength());
 });
 
 module.exports = { userMsgs, addMsg, isEmpty, replaceMsg };
