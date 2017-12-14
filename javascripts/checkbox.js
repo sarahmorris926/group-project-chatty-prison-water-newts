@@ -1,5 +1,6 @@
 "use strict";
 let lgTxt = document.getElementById('largeText');
+const nav = document.getElementById('nav');
 const msgBoard = document.querySelector("#msg-board");
 const darkTheme = document.getElementById('darkTheme');
 let container = document.getElementById('container');
@@ -21,8 +22,9 @@ darkTheme.addEventListener("click", checked);
   function checked() {
     if (darkTheme.checked) {
       container.classList.add("darkTheme");
-
+      nav.classList.add('darkTheme');
     } else {
       container.classList.remove("darkTheme");
+      nav.classList.remove('darkTheme');
     }
   }

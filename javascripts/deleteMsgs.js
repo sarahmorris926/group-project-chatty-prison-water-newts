@@ -6,19 +6,15 @@ let clearBTN = document.getElementById("clearBtn");
 
 
 output.addEventListener("click", function (event) {
-    let msgTxt = event.target.parentNode.firstElementChild.textContent;
     if (event.target.className === "delete") {
+        let msgTxt = event.target.parentNode.firstElementChild.textContent;
         //on 'delete' press, match msg text with array userMsgs and remove
         outputData.userMsgs.removeItem(msgTxt);
         //remove the parent div of that delete button
         output.removeChild(event.target.parentNode);
-    }
-});
-
-output.addEventListener('click', function(event) {
-    if (event.target.className === "edit") {
+    } else if (event.target.className === "edit") {
         event.target.className = "submit";
-    let msgTxt = event.target.parentNode.firstElementChild.textContent;
+        let msgTxt = event.target.parentNode.firstElementChild.textContent;
         outputData.userMsgs.removeItem(msgTxt);
         // change edit button text to Submit
         event.target.textContent = 'Submit';
@@ -30,12 +26,13 @@ output.addEventListener('click', function(event) {
         event.target.parentNode.firstElementChild.replaceWith(editableText);
         editableText.focus();
         event.target.addEventListener('click', function () {
-            if (event.target.className === "submit"){
+            if (event.target.className === "submit") {
                 outputData.replaceMsg(event.target.parentNode, editableText.value);
             }
         });
     }
 });
+
 
 clearBTN.addEventListener("click", clearBoard);
 
