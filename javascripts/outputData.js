@@ -34,8 +34,8 @@ let clearBTN = document.getElementById("clearBtn");
 const addMsg = (element, message) => {
     element.innerHTML += `<div class='msg newMsg'>
     <p>${message}</p>
-    <button class='delete'>Delete</button>
-    <button class='edit'>Edit</button>
+    <span class='delete'>🗑️</span>
+    <span class='edit'>Edit</span>
     </div>`;
     //message stored in a private array
     userMsgs.addItem(message);
@@ -44,8 +44,8 @@ const addMsg = (element, message) => {
 
 const replaceMsg = (element, newMsg)=>{
     element.innerHTML = `<p>${newMsg}</p>
-    <button class='delete'>Delete</button>
-    <button class='edit'>Edit</button>`;
+    <span class='delete'>🗑️</span>
+    <span class='edit'>Edit</span>`;
     //message stored in a private array
     userMsgs.addItem(newMsg);
     element.scrollTop = output.scrollHeight;

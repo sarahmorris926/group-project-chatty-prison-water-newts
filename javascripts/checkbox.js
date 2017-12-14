@@ -6,9 +6,10 @@ let container = document.getElementById('container');
 
 lgTxt.addEventListener('change', function(){
     if(this.checked){
-        msgBoard.style = 'font-size: 1.25em';
-    } else {
-        msgBoard.style = 'font-size: 1em';
+        msgBoard.style = 'font-size: 1.45em';
+    } 
+    else {
+        msgBoard.style = 'font-size: 1.2em';
     }
 });
 
