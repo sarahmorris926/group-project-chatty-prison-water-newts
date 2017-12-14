@@ -5,7 +5,6 @@
     width: 100%;
     /* overflow: hidden; */
     padding: 0em;
-    background-color: white;
 }
 .nav ul {
     display: flex;
@@ -52,10 +51,20 @@
 }
 .newMsg{
     text-align: right;
-    opacity: 1;
+     opacity: 1;
 }
+
+
+// Dark Theme
+ .darkTheme {
+     background-color: #191d22;
+     color: white;
+     text-shadow: .5px .5px .5px white;
+     
+ }
 
 .gecko {
     height: 4.25em;
     width: 3.25em;
 }
+
