@@ -1,5 +1,8 @@
 # Chatty Group Project
 
+This was a group project that I worked on with three other teammates. It was assigned on Wednesday, December 13th, 2017 and presented on Friday, December 15th, 2017.
+
+
 ## Setup
 
 Every teammate copy and run the following commands in the host machine terminal.
